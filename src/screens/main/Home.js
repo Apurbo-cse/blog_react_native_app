@@ -1,15 +1,32 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import navigationStrings from '../../navigations/navigationStrings'
+import { colors } from '../../constants/theme';
+import MainHeader from '../../components/MainHeader';
 
-const Home = ({navigation}) => {
+const Home = () => {
+
   return (
-    <View>
-    <Text style={{color:'red'}}>This is Home page</Text>
+    <View style={[
+      styles.container,
+      {
+        flexDirection: 'column',
+        height: 200,
+      },
+    ]}
+    >
+      <MainHeader />
+      <Text>Home</Text>
     </View>
   )
 }
 
-export default Home
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.light,
+  },
+});
+
+
+export default Home

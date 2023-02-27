@@ -1,12 +1,13 @@
 import * as React from "react";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import navigationStrings from "./navigationStrings";
-import { Home, Profile } from "../screens";
+
+
 import HomeStack from "./HomeStack";
 import { StyleSheet, Animated } from "react-native";
 import { colors, sizes } from "../constants/theme";
 import Icon from "../components/Icon";
+import { Profile } from "../screens";
 
 const tabs = [
   {

@@ -1,8 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import navigationStrings from './navigationStrings';
-import { Home } from '../screens';
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Home } from '../screens';
+
 
 const HomeStackScreen = createNativeStackNavigator();
 const HomeStack = () => {
@@ -14,5 +16,6 @@ const HomeStack = () => {
 }
 
 export default HomeStack
+
 
 const styles = StyleSheet.create({})
