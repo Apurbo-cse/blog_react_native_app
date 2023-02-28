@@ -11,8 +11,9 @@ import {
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import { colors } from '../constants/theme';
 
-import imagePath from '../constants/imagePtah'
+
 import { useSelector } from 'react-redux';
+import imagePath from '../constants/imagePath';
 
 const MainHeader = ({title}) => {
   const insets = useSafeAreaInsets();

@@ -33,4 +33,6 @@ export default {
   iconReject: require('../../assets/icons/option/reject.png'),
   iconResult: require('../../assets/icons/option/rejult.png'),
   iconProfileDefult: require('../../assets/icons/option/profile_1.png'),
+  
+
 };

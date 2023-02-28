@@ -3,7 +3,9 @@ import React from 'react'
 import navigationStrings from './navigationStrings';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Home } from '../screens';
+import { Greetins, Home } from '../screens';
+
+
 
 
 const HomeStackScreen = createNativeStackNavigator();
@@ -11,6 +13,7 @@ const HomeStack = () => {
   return (
     <HomeStackScreen.Navigator  screenOptions={{ headerShown: false }}>
       <HomeStackScreen.Screen name={navigationStrings.HOME} component={Home} />
+      <HomeStackScreen.Screen name={navigationStrings.GREETINGS} component={Greetins} />
     </HomeStackScreen.Navigator>
   )
 }
