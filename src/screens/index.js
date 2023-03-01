@@ -7,4 +7,5 @@ export {default as SignUp} from './Auth/SignUpScreen';
 export {default as Home} from './main/Home';
 export {default as Profile} from './main/Profile';
 export {default as Greetins} from './main/Greetings';
+export {default as Create} from './main/Create';
 

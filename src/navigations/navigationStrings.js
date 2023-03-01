@@ -14,4 +14,5 @@ export default {
 
   // Greetings
   GREETINGS: "Greetings",
+  CREATE: "Create",
 };

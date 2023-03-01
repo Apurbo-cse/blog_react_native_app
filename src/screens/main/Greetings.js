@@ -4,6 +4,10 @@ import * as Animatable from 'react-native-animatable';
 import { colors } from "../../constants/theme";
 import { useNavigation } from "@react-navigation/native";
 import CustomHeader from "../../components/CustomHeader";
+import TopMenuHeader from "../../components/TopMenuHeader";
+import imagePath from "../../constants/imagePath";
+import OptionCard from "../../components/OptionCard";
+import navigationStrings from "../../navigations/navigationStrings";
 
 
 const Greetings = () => {
@@ -12,10 +16,36 @@ const Greetings = () => {
     <SafeAreaView>
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <CustomHeader backFunc={() => Navigation.goBack()} tns />
-      {/* <TopMenuHeader image={imagePath.iconLiveChat} title={'Live Chat'} /> */}
+      <TopMenuHeader image={imagePath.iconLiveChat} title={'Live Chat'} />
+
         <Animatable.View animation="slideInUp" style={styles.animation}>
           <View style={styles.animation_view}>
             <Text style={styles.title}>Greetings</Text>
+            <OptionCard
+              action={navigationStrings.CREATE}
+              // payload={{
+              //   typeName: 'LiveChatCreate',
+              // }}
+              icon={imagePath.iconCreate}
+              title={'Create'}
+            />
+            <OptionCard
+              icon={imagePath.iconPending}
+              title={'Pending'}
+              cout={5}
+            />
+            <OptionCard icon={imagePath.iconApproved} title={'Approved'} />
+            <OptionCard icon={imagePath.iconComoleted} title={'Completed'} />
+            <OptionCard
+              icon={imagePath.iconReject}
+              title={'Recject'}
+              cout={10}
+            />
+            <OptionCard
+              icon={imagePath.iconAll}
+              title={'All'}
+              // action={navigationStrings.LIVECHATALL}
+            />
           </View>
         </Animatable.View>
       </ScrollView>

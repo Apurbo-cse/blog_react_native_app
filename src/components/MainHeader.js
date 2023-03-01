@@ -9,10 +9,8 @@ import {
 } from 'react-native';
 
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import { colors } from '../constants/theme';
-
-
 import { useSelector } from 'react-redux';
+import { colors } from '../constants/theme';
 import imagePath from '../constants/imagePath';
 
 const MainHeader = ({title}) => {
