@@ -44,7 +44,6 @@ const CardView = ({ item }) => {
           <Text style={styles.text}>{item.name}</Text>
           <Text style={styles.text2} numberOfLines={3} >{item.description}</Text>
         </View>
-
       </ImageBackground>
     </TouchableOpacity>
   );
