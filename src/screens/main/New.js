@@ -8,6 +8,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { colors } from "../../constants/theme";
 import axios from "axios";
+import { useFormik } from "formik";
 
 const New = () => {
   const [data, setData] = useState([]);
@@ -53,6 +54,33 @@ const New = () => {
         console.log(error.message);
       });
   };
+
+  const formik = useFormik({
+    initialValues: { title: '' },
+    onSubmit: values => {
+      RNFetchBlob.fetch('POST', `<domain-name>/api/imageadd`, {
+        
+        'Content-Type' : 'multipart/form-data',
+      }, 
+  [
+    { 
+       name : 'image', 
+       filename : fileUri, 
+       type:'image/jpeg', 
+       data:    RNFetchBlob.wrap(fileContent)
+    },
+    { 
+       name : 'title', 
+       data : values.title
+    },
+        
+      ]).then((resp) => {
+        // ...
+      }).catch((err) => {
+        Alert.alert('An error occurred!', err.message, [{ text: 'Okay' }]);
+      })
+    }
+  });
 
   return (
     <>
@@ -128,6 +156,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.Background,
     padding: 10,
     marginBottom: 10,
+    marginTop:20,
   },
   createPostRow: {
     color: "white",

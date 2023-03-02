@@ -44,7 +44,7 @@ const Greetings = () => {
             <OptionCard
               icon={imagePath.iconAll}
               title={'All'}
-              // action={navigationStrings.LIVECHATALL}
+              action={navigationStrings.GREETINGS_All}
             />
           </View>
         </Animatable.View>

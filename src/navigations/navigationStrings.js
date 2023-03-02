@@ -15,4 +15,6 @@ export default {
   // Greetings
   GREETINGS: "Greetings",
   CREATE: "Create",
+  GREETINGS_All: "All",
+  DETAILS:'Details',
 };

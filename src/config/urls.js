@@ -1,13 +1,7 @@
-export const API_BASE_URL='http://192.168.0.197:81/HelloSuperStarsBackend-2/public/api/';
+export const API_BASE_URL='https://backend.hellosuperstars.com/api/';
 export const getApiUrl=(endpoint)=>API_BASE_URL+endpoint;
 
 export const LOGIN=getApiUrl('login');
 export const SIGNUP=getApiUrl('register');
 
 
-// class urls{
-
-// }
-
-
-// export default urls;

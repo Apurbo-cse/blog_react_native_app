@@ -27,7 +27,7 @@ const Home = () => {
             title={"Greetings"}
           />
            <Card
-            // action={navigationStrings.GREETINGS}
+            action={navigationStrings.GREETINGS}
             icon={imagePath.iconGresstings}
             title={"Greetings"}
           />
