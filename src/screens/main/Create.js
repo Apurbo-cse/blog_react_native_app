@@ -23,13 +23,16 @@ const Create = ({ route }) => {
     setCourseName(value);
   };
 
+  
   const onChangePrice = (value) => {
     setCoursePrice(value);
   };
 
+
   const onChangeDescriptoin = (value) => {
     setDescriptoin(value);
   };
+
 
   const handelSave = () => {
     var data = {
