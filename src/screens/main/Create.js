@@ -4,14 +4,12 @@ import {
   View,
   TextInput,
   SafeAreaView,
-  ScrollView,
   TouchableOpacity,
 } from "react-native";
 import React, { useState } from "react";
 import CustomHeader from "../../components/CustomHeader";
 import { useNavigation } from "@react-navigation/native";
 
-import NewX from "./NewX";
 import axios from "axios";
 
 const Create = ({ route }) => {
@@ -39,8 +37,8 @@ const Create = ({ route }) => {
         name: coureName,
         price: Number(coursePrice) || 0,
         description: description,
-        // "status": Number(status) || 0,
       };
+
       axios({
         url: "http://192.168.0.208:81/api_native/public/api/store",
         method: "POST",
@@ -48,16 +46,7 @@ const Create = ({ route }) => {
         headers: {
           "Content-Type": "application/json",
         },
-      }).then((res) => {
-        getList();
-
-        setCourseName("");
-        setCoursePrice(0);
-        setDescriptoin("");
-        // setStatus(1)
-        setViisble(false);
-      });
-    
+      })
     
   };
 
